@@ -40,8 +40,8 @@ export const CartItem = ({ title, price, id, stock, quantity }) => {
         <p>Disponibles: {stock}</p>
         <p>precio total: ${price * quantity}</p>
         <section className="flex gap-2 items-center w-1/6 h-full">
-          <button onClick={handleIncrement} className="invert h-7">
-            <img src={Plus} className="h-full" alt="" />
+          <button onClick={handleDecrement} className="invert h-7">
+            <img src={Less} className="h-full" alt="" />
           </button>
           <input
             ref={inputRef}
@@ -50,8 +50,8 @@ export const CartItem = ({ title, price, id, stock, quantity }) => {
             Value={quantity}
             className="w-12 h-full text-black text-center"
           />
-          <button onClick={handleDecrement} className="invert h-7">
-            <img src={Less} className="h-full" alt="" />
+          <button onClick={handleIncrement} className="invert h-7">
+            <img src={Plus} className="h-full" alt="" />
           </button>
         </section>
       </section>

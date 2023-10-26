@@ -13,10 +13,9 @@ export const PrincipalPage = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    fetch("https://localhost:7260/api/Libro/Listar")
+    fetch("http://harrypotter.somee.com/api/Libro/Listar")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.response);
         setBooks(data.response);
       });
   }, []);

@@ -10,13 +10,14 @@ export const Book = ({ image, title, price, id, stock }) => {
   };
 
   return (
-    <article className="max-h-screen my-2 h-96 w-52 min-w-[9rem] p-2 text-white items-center justify-between border-secundario border flex flex-col rounded-b-3xl">
+    <article className="max-h-screen my-2 h-[30rem] w-72 min-w-[9rem] p-2 text-white items-center justify-between border-secundario border flex flex-col rounded-b-3xl">
       <img
         src={image}
         alt=""
         className="object-cover h-2/3 w-full rounded-t-3xl"
       />
       <strong className="self-start">{title}</strong>
+      <span>Disponibles {stock}</span>
       <span >{price}$</span>
       <button
         onClick={handleClick}
