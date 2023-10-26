@@ -7,7 +7,7 @@ export const Dialog = ({ finalPrice, handleClick }) => {
   const [finalMessage, setFinalMessage] = useState("Confirmacion de la compra");
   const buyProduct = (product) => {
     fetch(
-      `${BASE_URLD}?id=${product.id}&quantity=${product.quantity}`
+      `${BASE_URLD}api/Libro/Comprar?id=${product.id}&quantity=${product.quantity}`
     );
   };
 
