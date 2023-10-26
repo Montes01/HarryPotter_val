@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useContext } from "react";
 import CartContext from "../Hooks/CartContext";
-
+import BASE_URLD from "../Constants/BASE_URL.d";
 export const Dialog = ({ finalPrice, handleClick }) => {
   const { cart } = useContext(CartContext);
   const [finalMessage, setFinalMessage] = useState("Confirmacion de la compra");
   const buyProduct = (product) => {
     fetch(
-      `http://harrypotter.somee.com/api/Libro/Comprar?id=${product.id}&quantity=${product.quantity}`
+      `${BASE_URLD}?id=${product.id}&quantity=${product.quantity}`
     );
   };
 

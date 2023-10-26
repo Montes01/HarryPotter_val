@@ -7,13 +7,15 @@ import { Book } from "./Items/Book";
 import { useContext } from "react";
 //importamos el contexto del carrito
 import CartContext from "../../../Hooks/CartContext";
+
+import BASE_URLD from "../../../Constants/BASE_URL.d";
 import { useEffect } from "react";
 export const PrincipalPage = () => {
   //Importamos los libros de la api
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    fetch("http://harrypotter.somee.com/api/Libro/Listar")
+    fetch(BASE_URLD+"api/Libro/Listar")
       .then((res) => res.json())
       .then((data) => {
         setBooks(data.response);
